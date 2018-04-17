@@ -1,0 +1,44 @@
+{{set randomCls = 'randomCls_'+cfg.random}}
+<div class='md_left_v2 {{randomCls}}'>
+    <div class='mb'>
+        <div class='box_hd2 box_hd2_red'>
+            <span>短期市场热点</span>
+            <b>
+                <i class='i_t'></i>
+                <i class='i_b'></i>
+            </b>
+        </div>
+        <div class='box_show_tl box_show_tlBD'>
+            {{each data.shortRecommendIndustries.entries value index}} {{set liCls = 'shortIndustryRecommed_'+cfg.random+'_'+index}}
+            <li class="{{liCls}}">
+                <div class='box_hd'>
+                    <span>{{index+1}}、{{value.term}}</span>
+                    <a class="icon-arrow_open" onclick='iR.showAnswer("{{liCls}}","{{value.term}}","短期")'>
+                    </a>
+                </div>
+                <h5></h5>
+            </li>
+            {{/each}}
+        </div>
+        <div class='box_hd2 box_hd2_blue'>
+            <span>中长期投资方向</span>
+            <b>
+                <i class='i_t'></i>
+                <i class='i_b'></i>
+            </b>
+        </div>
+        <div class='box_show_tl box_show_tlBD'>
+            {{each data.longRecommendIndustries.entries value index}} {{set liCls = 'longIndustryRecommed_'+cfg.random+'_'+index}}
+            <li class="{{liCls}}">
+                <div class='box_hd'>
+                    <span>{{index+1}}、{{value.term}}</span>
+                    <a class="icon-arrow_open" onclick='iR.showAnswer("{{liCls}}","{{value.term}}","中长期")'>
+                    </a>
+                </div>
+                <h5></h5>
+            </li>
+            {{/each}}
+        </div>
+        <div class="getRatingLabel_{{cfg.random}} box_appraisal"></div>
+    </div>
+</div>

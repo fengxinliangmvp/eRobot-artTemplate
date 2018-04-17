@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>智能小e 股票问答</title>
+    <link rel="stylesheet" href="style/yy_icon.css?v=20170717">
+    <link rel="stylesheet" href="style/yy_style_v1.css?v=20170719">
+    <link rel="stylesheet" href="style/yy_style_v2.css?v=20170729">
+    <link rel="stylesheet" href="style/hpc_style.css?v=20170724">
+    <style>
+        .spinner {
+            position: relative;
+            top: 7px;
+        }
+
+        .spinner>div {
+            width: 6px;
+            height: 6px;
+            background-color: #4285f4;
+            border-radius: 100%;
+            display: inline-block;
+            -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+            animation: bouncedelay 1.4s infinite ease-in-out;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        .spinner .bounce1 {
+            -webkit-animation-delay: -.32s;
+            animation-delay: -.32s;
+        }
+
+        .spinner .bounce2 {
+            -webkit-animation-delay: -.16s;
+            animation-delay: -.16s;
+        }
+
+        @-webkit-keyframes bouncedelay {
+            0%,
+            100%,
+            80% {
+                -webkit-transform: scale(0);
+            }
+            40% {
+                -webkit-transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="pageBody" class="body_v2">
+        <!--标题栏-->
+        <header id="titleBar" style="display: none;">
+            <a class="arrowL icon-arrowL"></a>
+            <p>智能小e 股票问答</p>
+        </header>
+
+        <!--内容部分-->
+        <div id="mainContent" class="page_body_v2 pt_0"></div>
+    </div>
+    <script type="text/javascript" data-main="js/main" src="js/lib/require.js"></script>
+</body>
+
+</html>
